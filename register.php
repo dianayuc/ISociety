@@ -57,6 +57,122 @@ if (isset($_POST['submit'])) {
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
  
     <title>Register</title>
+    <style>
+        .container {
+            width: 400px;
+            min-height: 200px;
+            background: #FFF;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,.3);
+            padding: 40px 30px;
+        }
+            .container {
+    width: 400px;
+    min-height: 200px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 40px 30px;
+}
+ 
+.container .login-text {
+    color: #111;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
+}
+ 
+.container .login-email .input-group {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+ 
+.container .login-email .input-group input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #FFC94A;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    outline: none;
+    transition: .3s;
+}
+ 
+.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
+    border-color: #FFC94A;
+}
+ 
+.container .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #FFC94A;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+}
+ 
+.container .login-email .input-group .btn:hover {
+    transform: translateY(-5px);
+    background: #FFC94A;
+}
+ 
+.login-register-text {
+    color: #111;
+    font-weight: 600;
+}
+ 
+.login-register-text a {
+    text-decoration: none;
+    color: #FFC94A;
+}
+ 
+.container-logout {
+    width: 500px;
+    min-height: 200px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 40px 30px;
+}
+ 
+.container-logout .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #FFC94A;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 20px;
+}
+ 
+.container-logout .login-email .input-group .btn:hover {
+    transform: translateY(-5px);
+    background: #FFC94A;
+}
+ 
+@media (max-width: 430px) {
+    .container {
+        width: 300px;
+    }
+}
+    </style>
 </head>
 <body>
     <div class="container">
