@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['username'] = $row['username'];
         header("Location: berhasil_login.php");
     } else {
-        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+        $_SESSION['error'] = "Email atau password Anda salah. Silahkan coba lagi!";
     }
 }
 ?>
@@ -38,6 +38,7 @@ if (isset($_POST['submit'])) {
     <!-- Favicons -->
   <link href="img/logo2.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <style>
         .container {
             width: 400px;
@@ -157,9 +158,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="alert alert-warning" role="alert">
-        <?php echo $_SESSION['error']?>
-    </div>
+    
 
 <!--Form login-->
     <div class="container">
@@ -182,5 +181,18 @@ if (isset($_POST['submit'])) {
             <p class="login-register-text">Anda belum punya akun? <a href="register.php">Register</a></p>
         </form>
     </div>
+    <script>
+    <?php if(isset($_SESSION['error'])): ?>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: '<?php echo $_SESSION['error']; ?>',
+                confirmButtonColor:'#FFC94A'
+            });
+        });
+        <?php unset($_SESSION['error']);?>;
+    <?php endif; ?> 
+    </script>    
 </body>
 </html>
